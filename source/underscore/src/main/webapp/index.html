@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Underscore</title>
+</head>
+<body>
+	<h1>Underscore</h1>
+	<hr>
+	<div name="main-container">
+		<a href="0001_base.html">创建为一个Underscore对象</a> <br>
+		<a href="0002_template.html">Underscore解析模版</a> <br>
+	</div>
+</body>
+<script type="text/javascript" src="js/mattdamon.js"></script>
+<script type="text/javascript">
+	mattdamon.lib.requirejs("/require.js", function() {
+		requirejs.config({
+			//baseurl必须指定为requirejs的路径否则i18n不能动态设置。只能依赖于IE local设置
+			baseUrl : "js/requirejs/" + version.requirejs,
+			paths : {
+				jQuery : "../../jquery/" + version.jQuery + "/jquery",
+				underscore : "../../underscore/" + version.underscore
+						+ "/underscore",
+				mattdamon : "../../mattdamon/" + version.mattdamon
+			},
+			config : {
+				i18n : {
+					locale : "zh"
+				}
+			}
+		});
+		console.log("require.js completed");
+	});
+</script>
+</html>

@@ -1,0 +1,11 @@
+<% 
+	for(var i = 0; i < list.length; i++){ 
+%>
+	<% var item = list[i] %>
+	<li>
+		<span><%=item.firstName%> <%=item.lastName%></span><span><%-item.city%></span>
+		<br>
+	</li>
+<%
+	}
+%>
